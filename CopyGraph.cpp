@@ -1,16 +1,16 @@
 typedef unordered_map<Node *, Node *> HashTable;   // <original, copy>
 
 Node *clone(Node *graph) {
-    if (!graph) return NULL;
+	if (!graph) return NULL;
  
-    HashTable hashTable;
-    queue<Node *> q;
-    q.push(graph);
+	HashTable hashTable;
+	queue<Node *> q;
+	q.push(graph);
  
-    Node *graphCopy = new Node();
-    hashTable[graph] = graphCopy;
+	Node *graphCopy = new Node();
+	hashTable[graph] = graphCopy;
  
-    while (!q.empty()) {
+	while (!q.empty()) {
         Node *node = q.front();
         q.pop();
         int n = node->neighbors.size();
