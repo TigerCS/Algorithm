@@ -4,7 +4,7 @@ vector<vector<string> > solveNQueens(int n) {
     solveNQueensRe(n, 0, 0, 0, sol, res);
     return res;
 }
- 
+
 void solveNQueensRe(int n, int row, int ld, int rd, vector<string> &sol, vector<vector<string>> &res)
 {
     if (row == (1 << n) - 1)
